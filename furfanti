@@ -1,0 +1,61 @@
+A dice: “Io sono un furfante ma B non lo è”. Cosa sono A e B?
+
+1 se A è un cavaliere) A -> Not A || Not B
+2 è un furfante) Not A -> A && B
+
+1,2 |= A -> voglio dimostrare che: per ogni M|=1 e M|=2 allora M|=A
+
+Sia M qualsiasi, tale che
+ip1)  M|= A -> Not A || Not B
+ip2)  M|= Not A -> A && B
+
+
+ip1 - M!|=A oppure M!|= Not A || Not B
+      M!|= A oppure M!|=B
+
+ip2 - M!|=Not A oppure M|=A && B
+      M|=A oppure (M|=A && M|=B) ===> M|=A
+
+
+ip2|=A
+PER ASSURDO, nego quanto segue:
+per ogni M se M|=Not A -> A && B allora M|=A
+
+esiste un M per cui M|=Not A -> A && B allora      M!|=A
+i casi sono due: o M!|=Not A <-> M|=A oppure M!|= A && B => M|= A assurdo (M!|=A)
+
+
+Dobbiamo per forza usare ip1!
+B deve per forza essere un furfante.
+
+TESI!
+se M|=ip1 e M|=ip2 M|=ip2 => M|=A
+M|=A -> Not || Not B
+
+da tutto ciò sgue che M|= Not A || Not B =>
+    M|=Not A => M|=A FALSO
+    oppure M!|= Not B
+
+(* 6 *)
+A dice: “Io sono un furfante oppure 2+2=5”. Cosa si può concludere?
+A -> Not A || False
+
+
+
+(* 5 *)
+Ci sono tre persone: A, B e C. A dice: “B e C sono dello stesso tipo”.
+Qualcuno chiede a C: “A e B sono dello stesso tipo?”. Cosa risponde C?
+
+Se A è un cavaliere B e C sono o cavalieri o furfanti => tutti e tre sono cavalieri
+A dice
+    (B && C),B,C => C risponde Sì
+    || (Not B && Not C),Not B,Not C => C è furfante e risponde comunque Sì
+
+!A dice
+    Not(B && C) => Not B || Not C
+    Not(Not B && Not C) => B || C => Not B,(B || C) => Not B,B || Not B, C => C risponde sì
+                                  => Not C, (B||C) => Not C,(B || C) => Not C,B =>C dice Sì
+                                                                     =>Not C,C
+
+
+
