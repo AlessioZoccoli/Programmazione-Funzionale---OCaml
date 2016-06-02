@@ -16,7 +16,7 @@ type multi_expr =
 
 (* a 
 Scrivereunafunzionesubexpr: multi_expr -> multi_expr -> bool che, date due
-espressioni aritmetiche E1 e E2, determini se E2 è una sottoespressione di E1.
+espressioni aritmetiche E1 e E2, determini se E2 è una sottoespressione di E1.
 *)
 (* subexpr: multi_expr -> multi_expr -> bool *)
 let rec subexpr expr sub =
@@ -133,15 +133,15 @@ let rec numfoglie = function
 
 (*============ Es5:listaGuida =============*)
 (*
-Una lista di interi non negativi L può determinare un sottoalbero di un albero
+Una lista di interi non negativi L può determinare un sottoalbero di un albero
 n-ario T: quello che si ottiene, a partire dalla radice, scendendo, per ogni
 elemento n di L, al sottoalbero in posizione n nella lista dei sottoalberi
 (se esiste) – si ricordi che la posizione degli elementi in una lista si conta
-a partire da 0. Se la lista è più lunga del ramo cui essa conduce, oppure se a
+a partire da 0. Se la lista è più lunga del ramo cui essa conduce, oppure se a
 qualche livello non esiste un numero sufficiente di sottoalberi, allora L non
 determina alcun sottoalbero di T.
 
-Ad esempio, se T è l’albero:
+Ad esempio, se T è l’albero:
 la lista [2;0] determina il sottoalbero che ha radice 11, la lista [2;2;1]
 quello che ha radice 18, [2;2;1;0] il sottoalbero costituito soltanto dal nodo 19.
 Le liste [1;2] e [0;1;1] non determinano alcun sottoalbero di T.
